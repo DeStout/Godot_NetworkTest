@@ -1,0 +1,6 @@
+[gd_scene format=2]
+
+[node name="Camera" type="Camera"]
+transform = Transform( 1, 0, 0, 0, 0.936121, 0.351678, 0, -0.351678, 0.936121, 0, 4.239, 7.679 )
+current = true
+far = 1e+06

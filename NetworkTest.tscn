@@ -1,0 +1,241 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://NetworkTest.gd" type="Script" id=1]
+[ext_resource path="res://Tracks/Track01.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="ProceduralSky" id=2]
+sky_top_color = Color( 0.301961, 0.25098, 0.545098, 1 )
+sky_horizon_color = Color( 0.858824, 0.152941, 0.4, 1 )
+ground_bottom_color = Color( 0.0941176, 0.00784314, 0.145098, 1 )
+ground_horizon_color = Color( 0.615686, 0.0196078, 0.32549, 1 )
+ground_curve = 0.0193187
+sun_color = Color( 1, 0, 0.0235294, 1 )
+sun_latitude = -20.0
+sun_angle_min = 0.0
+sun_angle_max = 63.56
+sun_curve = 1.25532
+
+[sub_resource type="Environment" id=3]
+background_mode = 2
+background_sky = SubResource( 2 )
+ambient_light_color = Color( 0.819608, 0.909804, 1, 1 )
+
+[node name="NetworkTest" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Spawns" type="Node" parent="."]
+
+[node name="Spawn1" type="Spatial" parent="Spawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 405.594, 200.13, 164.038 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Spawns/Spawn1"]
+layers = 2
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Spawn2" type="Spatial" parent="Spawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 390.443, 200.13, 164.038 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Spawns/Spawn2"]
+layers = 2
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Spawn3" type="Spatial" parent="Spawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 377.371, 200.13, 164.038 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Spawns/Spawn3"]
+layers = 2
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Spawn4" type="Spatial" parent="Spawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 363.225, 200.13, 164.038 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Spawns/Spawn4"]
+layers = 2
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Spawn5" type="Spatial" parent="Spawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 350.128, 200.13, 164.038 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Spawns/Spawn5"]
+layers = 2
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Spawn6" type="Spatial" parent="Spawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 338.569, 200.13, 164.038 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Spawns/Spawn6"]
+layers = 2
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Spawn18" type="Spatial" parent="Spawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 405.594, 200.13, 179.181 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Spawns/Spawn18"]
+layers = 2
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Spawn17" type="Spatial" parent="Spawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 390.443, 200.13, 179.181 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Spawns/Spawn17"]
+layers = 2
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Spawn16" type="Spatial" parent="Spawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 377.371, 200.13, 179.181 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Spawns/Spawn16"]
+layers = 2
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Spawn15" type="Spatial" parent="Spawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 363.225, 200.13, 179.181 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Spawns/Spawn15"]
+layers = 2
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Spawn14" type="Spatial" parent="Spawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 350.128, 200.13, 179.181 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Spawns/Spawn14"]
+layers = 2
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Spawn13" type="Spatial" parent="Spawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 338.569, 200.13, 179.181 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Spawns/Spawn13"]
+layers = 2
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Spawn7" type="Spatial" parent="Spawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 332.337, 200.13, 171.744 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Spawns/Spawn7"]
+layers = 2
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Spawn8" type="Spatial" parent="Spawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 343.896, 200.13, 171.744 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Spawns/Spawn8"]
+layers = 2
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Spawn9" type="Spatial" parent="Spawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 356.993, 200.13, 171.744 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Spawns/Spawn9"]
+layers = 2
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Spawn10" type="Spatial" parent="Spawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 371.139, 200.13, 171.744 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Spawns/Spawn10"]
+layers = 2
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Spawn11" type="Spatial" parent="Spawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 384.211, 200.13, 171.744 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Spawns/Spawn11"]
+layers = 2
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Spawn12" type="Spatial" parent="Spawns"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 399.362, 200.13, 171.744 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="Spawns/Spawn12"]
+layers = 2
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Track" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, -6.78615, 0 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 3 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="WorldEnvironment"]
+transform = Transform( 1, 0, 0, 0, -0.989249, 0.146238, 0, -0.146238, -0.989249, 0, 285.458, 0 )
+light_color = Color( 0.960784, 0, 0, 1 )
+shadow_enabled = true
+shadow_color = Color( 0.0823529, 0.0313726, 0.219608, 1 )
+shadow_bias = 0.0
+shadow_reverse_cull_face = true
+directional_shadow_max_distance = 1500.0
