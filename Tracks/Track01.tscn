@@ -1,0 +1,488 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Tracks/Track01/Track01Piece03.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Tracks/Track01/Track01Piece02.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Tracks/Track01/Track01Piece01.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Tracks/Track01/Track01Piece04.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Checkpoint.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Tracks/Track01/Track01Piece05.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Tracks/MapPlayers.gd" type="Script" id=7]
+
+[sub_resource type="CylinderMesh" id=1]
+top_radius = 10.0
+bottom_radius = 15.0
+height = 250.0
+rings = 1
+
+[sub_resource type="CylinderShape" id=2]
+radius = 15.0
+height = 250.0
+
+[node name="Track" type="Spatial"]
+transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0 )
+
+[node name="ViewportContainer" type="ViewportContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -184.0
+margin_top = 24.0
+margin_right = 840.0
+margin_bottom = 1048.0
+rect_scale = Vector2( 0.2, 0.2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MiniMap_ViewPort" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1024, 1024 )
+transparent_bg = true
+handle_input_locally = false
+hdr = false
+usage = 3
+render_target_update_mode = 3
+
+[node name="Pieces" type="Spatial" parent="ViewportContainer/MiniMap_ViewPort"]
+transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 369.02, 195.272, 181.811 )
+
+[node name="Piece01" parent="ViewportContainer/MiniMap_ViewPort/Pieces" instance=ExtResource( 3 )]
+transform = Transform( 3.69854, 0, 0, 0, 3.69854, 0, 0, 0, 3.69854, 0, 0, 0 )
+material/0 = null
+
+[node name="Piece02" parent="ViewportContainer/MiniMap_ViewPort/Pieces" instance=ExtResource( 2 )]
+transform = Transform( 3.69854, 0, 0, 0, 3.69854, 0, 0, 0, 3.69854, 0, 0, 0 )
+material/0 = null
+
+[node name="Piece03" parent="ViewportContainer/MiniMap_ViewPort/Pieces" instance=ExtResource( 1 )]
+transform = Transform( 3.69854, 0, 0, 0, 3.69854, 0, 0, 0, 3.69854, 0, 0, 0 )
+material/0 = null
+
+[node name="Piece04" parent="ViewportContainer/MiniMap_ViewPort/Pieces" instance=ExtResource( 4 )]
+transform = Transform( 3.69854, 0, 0, 0, 3.69854, 0, 0, 0, 3.69854, 0, 0, 0 )
+
+[node name="Piece05" parent="ViewportContainer/MiniMap_ViewPort/Pieces" instance=ExtResource( 6 )]
+transform = Transform( 3.69854, 0, 0, 0, 3.69854, 0, 0, 0, 3.69854, 0, 0, 0 )
+material/0 = null
+
+[node name="Checkpoints" type="Spatial" parent="ViewportContainer/MiniMap_ViewPort"]
+transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 369.02, 195.272, 181.811 )
+
+[node name="CheckpointSa" parent="ViewportContainer/MiniMap_ViewPort/Checkpoints" instance=ExtResource( 5 )]
+transform = Transform( -6.10952e-07, 0, 3.75, 0, 3.75, 0, -3.75, 0, -6.10952e-07, -58.1831, 25.7078, -389.921 )
+layers = 4
+next_serial = 1
+
+[node name="CheckpointSb" parent="ViewportContainer/MiniMap_ViewPort/Checkpoints" instance=ExtResource( 5 )]
+transform = Transform( -6.10952e-07, 0, 3.75, 0, 3.75, 0, -3.75, 0, -6.10952e-07, 28.0534, 25.7078, -389.921 )
+layers = 4
+next_serial = 1
+
+[node name="Checkpoint1a" parent="ViewportContainer/MiniMap_ViewPort/Checkpoints" instance=ExtResource( 5 )]
+transform = Transform( 0.11818, -0.0109955, 3.74813, -0.451037, 3.7227, 0.0251425, -3.7209, -0.451603, 0.115996, -1364.48, -155.787, -709.771 )
+layers = 4
+serial = 1
+next_serial = 2
+
+[node name="Checkpoint2a" parent="ViewportContainer/MiniMap_ViewPort/Checkpoints" instance=ExtResource( 5 )]
+transform = Transform( 0.125403, -0.305288, 3.73545, 0.0197834, 3.73754, 0.304795, -3.74785, 0.00951403, 0.126597, -344.472, 160.067, -476.783 )
+layers = 4
+serial = 2
+next_serial = 3
+
+[node name="Checkpoint2b" parent="ViewportContainer/MiniMap_ViewPort/Checkpoints" instance=ExtResource( 5 )]
+transform = Transform( 0.125403, -0.305288, 3.73545, 0.0197834, 3.73754, 0.304795, -3.74785, 0.00951403, 0.126597, -445.445, 151.828, -480.205 )
+layers = 4
+serial = 2
+next_serial = 3
+
+[node name="Checkpoint2c" parent="ViewportContainer/MiniMap_ViewPort/Checkpoints" instance=ExtResource( 5 )]
+transform = Transform( 0.125403, -0.305288, 3.73545, 0.0197834, 3.73754, 0.304795, -3.74785, 0.00951403, 0.126597, -544.98, 143.707, -483.578 )
+layers = 4
+serial = 2
+next_serial = 3
+
+[node name="Checkpoint3a" parent="ViewportContainer/MiniMap_ViewPort/Checkpoints" instance=ExtResource( 5 )]
+transform = Transform( -1.94813, -0.111228, 3.20233, -0.330712, 3.73471, -0.0714693, -3.18715, -0.319542, -1.95, -854.325, -109.963, 629.56 )
+layers = 4
+serial = 3
+
+[node name="Checkpoint3b" parent="ViewportContainer/MiniMap_ViewPort/Checkpoints" instance=ExtResource( 5 )]
+transform = Transform( -1.77009, -0.111228, 3.30408, -0.334126, 3.73471, -0.0532761, -3.28902, -0.319542, -1.77278, -920.325, -108.673, 667.599 )
+layers = 4
+serial = 3
+
+[node name="Env" type="Spatial" parent="ViewportContainer/MiniMap_ViewPort"]
+transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0 )
+
+[node name="Tree01" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 283.101, 258.597, -480.196 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree01"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree01"]
+shape = SubResource( 2 )
+
+[node name="Tree20" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 516.095, 258.597, -383.75 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree20"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree20"]
+shape = SubResource( 2 )
+
+[node name="Tree13" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -807.849, 132.036, -1168.79 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree13"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree13"]
+shape = SubResource( 2 )
+
+[node name="Tree18" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -932.844, 132.036, -899.673 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree18"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree18"]
+shape = SubResource( 2 )
+
+[node name="Tree21" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -633.007, 348.195, -365.945 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree21"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree21"]
+shape = SubResource( 2 )
+
+[node name="Tree22" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -578.82, 370.136, -554.901 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree22"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree22"]
+shape = SubResource( 2 )
+
+[node name="Tree23" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -705.393, 383.618, -627.883 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree23"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree23"]
+shape = SubResource( 2 )
+
+[node name="Tree25" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -515.771, 370.584, -744.958 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree25"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree25"]
+shape = SubResource( 2 )
+
+[node name="Tree27" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -409.429, 370.584, -878.883 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree27"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree27"]
+shape = SubResource( 2 )
+
+[node name="Tree26" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -473.778, 370.584, -692.034 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree26"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree26"]
+shape = SubResource( 2 )
+
+[node name="Tree24" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -649.129, 393.517, -702.451 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree24"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree24"]
+shape = SubResource( 2 )
+
+[node name="Tree19" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -933.65, 160.873, -799.799 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree19"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree19"]
+shape = SubResource( 2 )
+
+[node name="Tree14" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -580.569, 132.036, -1161.5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree14"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree14"]
+shape = SubResource( 2 )
+
+[node name="Tree15" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -749.445, 132.036, -1192.12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree15"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree15"]
+shape = SubResource( 2 )
+
+[node name="Tree16" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -455.879, 132.036, -1334.87 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree16"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree16"]
+shape = SubResource( 2 )
+
+[node name="Tree17" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.29659, 132.036, -1329.44 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree17"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree17"]
+shape = SubResource( 2 )
+
+[node name="Tree06" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( 1.687, 0, 0, 0, 1.968, 0, 0, 0, 1.687, 258.489, 352.882, -673.357 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree06"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree06"]
+shape = SubResource( 2 )
+
+[node name="Tree11" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( 1.687, 0, 0, 0, 1.968, 0, 0, 0, 1.687, -865.513, 258.913, -1012.12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree11"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree11"]
+shape = SubResource( 2 )
+
+[node name="Tree12" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( 1.687, 0, 0, 0, 1.11205, 0, 0, 0, 1.687, -720.083, 158.685, -970.919 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree12"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree12"]
+shape = SubResource( 2 )
+
+[node name="Tree07" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( 1.687, 0, 0, 0, 1.968, 0, 0, 0, 1.687, 318.961, 323.124, -951.394 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree07"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree07"]
+shape = SubResource( 2 )
+
+[node name="Tree02" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 423.591, 199.21, -614.005 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree02"]
+mesh = SubResource( 1 )
+material/0 = null
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree02"]
+shape = SubResource( 2 )
+
+[node name="Tree03" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( -2.51938, 0, 0, 0, 1, 0, 0, 0, -2.51938, -171.582, 159.903, -1014.44 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree03"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree03"]
+shape = SubResource( 2 )
+
+[node name="Tree04" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( -2.51938, 0, -2.20251e-07, 0, 1.67488, 0, 2.20251e-07, 0, -2.51938, 62.3923, 262.643, -1025.6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree04"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree04"]
+shape = SubResource( 2 )
+
+[node name="Tree05" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( -2.51938, 0, -2.20251e-07, 0, 1.67488, 0, 2.20251e-07, 0, -2.51938, -262.844, 238.397, -1170.36 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree05"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree05"]
+shape = SubResource( 2 )
+
+[node name="Tree10" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( -2.51938, 0, -2.20251e-07, 0, 1.67488, 0, 2.20251e-07, 0, -2.51938, 74.9345, 238.397, -1319.71 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree10"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree10"]
+shape = SubResource( 2 )
+
+[node name="Tree08" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( -5.71235, 0, -8.62541e-07, 0, 3.62479, 0, 8.62541e-07, 0, -5.71235, -412.63, 238.397, -1061.41 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree08"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree08"]
+shape = SubResource( 2 )
+
+[node name="Tree09" type="StaticBody" parent="ViewportContainer/MiniMap_ViewPort/Env"]
+transform = Transform( 3.87533, 0, 5.8516e-07, 0, 3.62479, 0, -5.85159e-07, 0, 3.87534, -372.741, 129.064, -1308.13 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tree" type="MeshInstance" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree09"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Collision" type="CollisionShape" parent="ViewportContainer/MiniMap_ViewPort/Env/Tree09"]
+shape = SubResource( 2 )
+
+[node name="Minimap_Camera" type="Camera" parent="ViewportContainer/MiniMap_ViewPort"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1105.48, 0 )
+cull_mask = 1048573
+projection = 1
+size = 2283.01
+far = 1500.0
+
+[node name="Players" type="Control" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -184.0
+margin_top = 24.0
+margin_right = 840.0
+margin_bottom = 1048.0
+rect_scale = Vector2( 0.2, 0.2 )
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
