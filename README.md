@@ -1,6 +1,6 @@
 # Godot_NetworkTest
 
-Downloadable executable for Windows, Linux, and macOS is available at https://drive.google.com/drive/folders/1-rujE_rVi_zWEY_ki9ibYbEVkulwoF6f?usp=sharing
+Downloadable executable for Windows, Linux, and macOS is available at https://drive.google.com/drive/folders/1-rujE_rVi_zWEY_ki9ibYbEVkulwoF6f?usp=sharing. For Windows and Linux download the appropriate executable and the pck file. For Mac you only need the zip.
 
 -Controls:
   - WASD - Movement
